@@ -85,6 +85,10 @@ namespace SupplyManagementClient.Controllers
                             // Pengguna memiliki peran "admin", lakukan tindakan admin
                             return Json(new { redirectTo = Url.Action("GetCompany", "Company") });
                         }
+                        if (role == "manager")
+                        {
+                            return Json(new { redirectTo = Url.Action("GetCompanyManager", "Company") });
+                        }
                         else if (statusAccount == "Requested")
                         {
                             return Json(new { status = "Error", message = "Status Akun Masih Requested, silahkan menuggu !!!" });
@@ -96,6 +100,14 @@ namespace SupplyManagementClient.Controllers
                         else if (statusAccount == "Approved" && statusVendor == "none")
                         {
                             return Json(new { redirectTo = Url.Action("HomeCompany", "Company") });
+                        }
+                        else if (statusAccount == "Approved" && statusVendor == "waiting" || statusVendor == "approvedByAdmin")
+                        {
+                            return Json(new { redirectTo = Url.Action("HomeCompanyWaiting", "Company") });
+                        }
+                        else if (statusAccount == "Approved" && statusVendor == "approvedByManager")
+                        {
+                            return Json(new { redirectTo = Url.Action("HomeCompanyVendor", "Company") });
                         }
 
                     }

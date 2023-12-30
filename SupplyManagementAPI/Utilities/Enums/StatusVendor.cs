@@ -15,5 +15,8 @@ namespace SupplyManagementAPI.Utilities.Enums
 
         [Display(Name = "disetujui manager")]
         approvedByManager = 3,
+
+        [Display(Name = "Ditolak")]
+        reject = 4,
     }
 }

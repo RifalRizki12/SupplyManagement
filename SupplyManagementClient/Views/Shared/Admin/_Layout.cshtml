@@ -147,15 +147,47 @@
                                 <div data-i18n="Data Approve">Data Approve</div>
                             </a>
                         </li>
+                        <li class="menu-item @(ViewContext.RouteData.Values["Controller"].ToString() == "Company" && ViewContext.RouteData.Values["Action"].ToString() == "GetCompanyAdmin" ? "active open" : "")">
+                            <a class="menu-link" asp-area="" asp-controller="Company" asp-action="GetCompanyAdmin">
+                                <i class="menu-icon tf-icons ti ti-tada ti-smart-home"></i>
+                                <div data-i18n="Data Approve Vendor">Data Approve Vendor</div>
+                            </a>
+                        </li>
 
+                    }
+                    @if (role == "manager")
+                    {
+                        <li class="menu-item @(ViewContext.RouteData.Values["Controller"].ToString() == "Company" && ViewContext.RouteData.Values["Action"].ToString() == "GetCompanyManager" ? "active open" : "")">
+                            <a class="menu-link" asp-area="" asp-controller="Company" asp-action="GetCompanyManager">
+                                <i class="menu-icon tf-icons ti ti-tada ti-smart-home"></i>
+                                <div data-i18n="Data Approve Vendor">Data Approve Vendor</div>
+                            </a>
+                        </li>
                     }
                     @if(role == "vendor" && statusVendor == "none" && statusAccount == "Approved")
                     {
-                        <!-- Dashboards -->
                         <li class="menu-item @(ViewContext.RouteData.Values["Controller"].ToString() == "Company" && ViewContext.RouteData.Values["Action"].ToString() == "HomeCompany" ? "active open" : "")">
                             <a class="menu-link" asp-area="" asp-controller="Company" asp-action="HomeCompany">
                                 <i class="menu-icon tf-icons ti ti-tada ti-smart-home"></i>
                                 <div data-i18n="Home Company">Home Company</div>
+                            </a>
+                        </li>
+                    }
+                    @if (role == "vendor" && statusVendor == "waiting" || statusVendor == "approvedByAdmin" && statusAccount == "Approved")
+                    {
+                        <li class="menu-item @(ViewContext.RouteData.Values["Controller"].ToString() == "Company" && ViewContext.RouteData.Values["Action"].ToString() == "HomeCompanyWaiting" ? "active open" : "")">
+                            <a class="menu-link" asp-area="" asp-controller="Company" asp-action="HomeCompanyWaiting">
+                                <i class="menu-icon tf-icons ti ti-tada ti-smart-home"></i>
+                                <div data-i18n="Home Company Waiting">Home Company Waiting</div>
+                            </a>
+                        </li>
+                    }
+                    @if (role == "vendor" && statusVendor == "approvedByManager" && statusAccount == "Approved")
+                    {
+                        <li class="menu-item @(ViewContext.RouteData.Values["Controller"].ToString() == "Company" && ViewContext.RouteData.Values["Action"].ToString() == "HomeCompanyVendor" ? "active open" : "")">
+                            <a class="menu-link" asp-area="" asp-controller="Company" asp-action="HomeCompanyVendor">
+                                <i class="menu-icon tf-icons ti ti-tada ti-smart-home"></i>
+                                <div data-i18n="Home Company Vendor">Home Company Vendor</div>
                             </a>
                         </li>
                     }

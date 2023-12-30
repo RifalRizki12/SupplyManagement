@@ -26,5 +26,33 @@ namespace SupplyManagementClient.Repository
                 return entityVM;
             }
         }
+
+        public async Task<ResponseOKHandler<IEnumerable<CompanyDetailDto>>> GetCompanyApproveAdmin()
+        {
+            // Ganti request ke endpoint yang sesuai
+            var requestUrl = "company-DetailsWaiting";
+
+            using (var response = await httpClient.GetAsync(request + requestUrl))
+            {
+                string apiResponse = await response.Content.ReadAsStringAsync();
+                var entityVM = JsonConvert.DeserializeObject<ResponseOKHandler<IEnumerable<CompanyDetailDto>>>(apiResponse);
+                return entityVM;
+            }
+        }
+
+        public async Task<ResponseOKHandler<IEnumerable<CompanyDetailDto>>> GetCompanyApproveManager()
+        {
+            // Ganti request ke endpoint yang sesuai
+            var requestUrl = "company-ApproveByAdmin";
+
+            using (var response = await httpClient.GetAsync(request + requestUrl))
+            {
+                string apiResponse = await response.Content.ReadAsStringAsync();
+                var entityVM = JsonConvert.DeserializeObject<ResponseOKHandler<IEnumerable<CompanyDetailDto>>>(apiResponse);
+                return entityVM;
+            }
+        }
+
+
     }
 }

@@ -7,5 +7,7 @@ namespace SupplyManagementClient.Contract
     public interface ICompanyRepository : IRepository<Company, Guid>
     {
         Task<ResponseOKHandler<IEnumerable<CompanyDetailDto>>> GetDetailClient();
+        Task<ResponseOKHandler<IEnumerable<CompanyDetailDto>>> GetCompanyApproveAdmin();
+        Task<ResponseOKHandler<IEnumerable<CompanyDetailDto>>> GetCompanyApproveManager();
     }
 }

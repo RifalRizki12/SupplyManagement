@@ -65,7 +65,7 @@ namespace API.Controllers
         }
 
         // PUT api/vendor
-        [HttpPut]
+        [HttpPut("updateVendor")]
         public IActionResult Update(VendorDto vendorDto)
         {
             try

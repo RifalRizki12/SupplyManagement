@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Approve Company";
+    Layout = "/Views/Shared/Admin/_Layout.cshtml";
+}
+
+<!-- Complex Headers -->
+<div class="card">
+    <h5 class="card-header">Data Approve Vendor</h5>
+    <br />
+    <div class="card-datatable text-nowrap table-responsive">
+        <table id="tableVendorAdmin" class="dt-complex-header table table-bordered dt-responsive table datatables-basic table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th class="no-export">Foto</th>
+                    <th>Name Company</th>
+                    <th>Email</th>
+                    <th>Status Account</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                    <th>bidang Usaha</th>
+                    <th>Jenis Perusahaan</th>
+                    <th>Status Vendor</th>
+                    <th class="no-export">Action</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<!--/ Complex Headers -->
+@section scripts {
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <!-- DataTables JavaScript -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <!-- DataTables Buttons JavaScript -->
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js"></script>
+
+    <!-- Your DataTable Initialization Script -->
+    <script src="~/js/Company.js" asp-append-version="true"></script>
+
+}
