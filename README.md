@@ -10,4 +10,4 @@
  email : manager@mail.com
  Password : Manager12345
 
-Note : beberapa tampilan masih belum full selesai dibuat dikarenakan ada sesuatu yang menghambat pengerjaan
+Note : -Hasil Tes Aplikasi Web di Pdf belum lengkap, update terbaru tampilan web belum dicantumkan
