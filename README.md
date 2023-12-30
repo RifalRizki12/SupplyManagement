@@ -8,6 +8,6 @@
 
  Manager
  email : manager@mail.com
- Password L Manager12345
+ Password : Manager12345
 
 Note : beberapa tampilan masih belum full selesai dibuat dikarenakan ada sesuatu yang menghambat pengerjaan
