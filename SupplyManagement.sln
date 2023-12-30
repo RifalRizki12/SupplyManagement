@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupplyManagementAPI", "SupplyManagementAPI\SupplyManagementAPI.csproj", "{A1F3294B-B711-420B-81C5-84F210574046}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyManagementClient", "SupplyManagementClient\SupplyManagementClient.csproj", "{709B15EA-13E7-4EEC-953C-5047FCC0A9B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1F3294B-B711-420B-81C5-84F210574046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1F3294B-B711-420B-81C5-84F210574046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1F3294B-B711-420B-81C5-84F210574046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1F3294B-B711-420B-81C5-84F210574046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{709B15EA-13E7-4EEC-953C-5047FCC0A9B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{709B15EA-13E7-4EEC-953C-5047FCC0A9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{709B15EA-13E7-4EEC-953C-5047FCC0A9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{709B15EA-13E7-4EEC-953C-5047FCC0A9B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E39486B6-612C-4A3D-8F54-029DBDCC4FE9}
+	EndGlobalSection
+EndGlobal

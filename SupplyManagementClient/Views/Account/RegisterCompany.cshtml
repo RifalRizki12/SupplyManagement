@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "RegisterCompany";
+    Layout = "/Views/Shared/Admin/_StyleLayout.cshtml";
+}
+
+<!-- Content -->
+
+<div class="authentication-wrapper authentication-cover authentication-bg">
+    <div class="authentication-inner row">
+
+        <!-- Left Text -->
+        <div class="d-none d-lg-flex col-lg-4 align-items-center justify-content-center p-5 auth-cover-bg-color position-relative auth-multisteps-bg-height">
+            <img src="../../TAdmin/assets/img/illustrations/auth-register-multisteps-illustration.png" alt="auth-register-multisteps" class="img-fluid" width="280">
+
+            <img src="../../TAdmin/assets/img/illustrations/bg-shape-image-light.png" alt="auth-register-multisteps" class="platform-bg" data-app-light-img="illustrations/bg-shape-image-light.png" data-app-dark-img="illustrations/bg-shape-image-dark.html">
+        </div>
+        <!-- /Left Text -->
+        <!--  Multi Steps Registration -->
+        <div class="d-flex col-lg-8 align-items-center justify-content-center p-sm-5 p-3">
+            <div class="w-px-700">
+                <div class="bs-stepper-content">
+                    <form id="registerForm" onSubmit="return false">
+
+                        <div class="content-header mb-4">
+                            <h3 class="mb-1">Account Information</h3>
+                            <p>Enter Your Account Details</p>
+                        </div>
+                        <!-- Personal Info -->
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label class="form-label" for="name">Name Company</label>
+                                <input type="text" id="name" name="multiStepsFirstName" class="form-control" placeholder="John" required/>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="profilePictureInput" class="form-label">Picture Company</label>
+                                <input class="form-control" type="file" id="profilePictureInput" required>
+                            </div>
+                            <div class="col-sm-12">
+                                <label for="addressCompanyInput">Address Company</label>
+                                <input type="text" placeholder="jakarta, jln je" class="form-control" id="addressCompanyInput" name="AddressCompany" required />
+                            </div>
+                            
+                        </div>
+                        <!-- Account Details -->
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label class="form-label" for="emailInput">Email</label>
+                                <input type="email" name="multiStepsEmail" id="emailInput" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe" required />
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label" for="phoneNumberInput">Phone Number</label>
+                                <input type="text" name="multiStepsPhone" placeholder="08xxxxxx" id="phoneNumberInput" class="form-control" required />
+                            </div>
+                            <div class="col-sm-6 form-password-toggle">
+                                <label class="form-label" for="passwordInput">Password</label>
+                                <div class="input-group input-group-merge">
+                                    <input type="password" id="passwordInput" name="multiStepsPass" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="multiStepsPass2" required />
+                                    <span class="input-group-text cursor-pointer" id="passwordInput"><i class="ti ti-eye-off"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 form-password-toggle">
+                                <label class="form-label" for="confirmPasswordInput">Confirm Password</label>
+                                <div class="input-group input-group-merge">
+                                    <input type="password" id="confirmPasswordInput" name="multiStepsConfirmPass" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="multiStepsConfirmPass2" required />
+                                    <span class="input-group-text cursor-pointer" id="confirmPasswordInput"><i class="ti ti-eye-off"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 justify-content-between mt-4">
+                                <button type="submit" class="btn btn-success btn-next btn-submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- / Multi Steps Registration -->
+    </div>
+</div>
+<!-- / Content -->
+@section scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/Register.js" asp-append-version="true"></script>
+}
