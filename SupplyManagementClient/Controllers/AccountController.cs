@@ -97,7 +97,7 @@ namespace SupplyManagementClient.Controllers
                         {
                             return Json(new { status = "Error", message = "Status Akun Non-Aktif/Rejected, silahkan Menghubungi Admin !!!" });
                         }
-                        else if (statusAccount == "Approved" && statusVendor == "none")
+                        else if (statusAccount == "Approved" && statusVendor == "none" || statusVendor == "reject")
                         {
                             return Json(new { redirectTo = Url.Action("HomeCompany", "Company") });
                         }

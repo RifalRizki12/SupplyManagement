@@ -164,7 +164,7 @@
                             </a>
                         </li>
                     }
-                    @if(role == "vendor" && statusVendor == "none" && statusAccount == "Approved")
+                    @if (role == "vendor" && statusVendor == "none" || statusVendor == "reject" && statusAccount == "Approved")
                     {
                         <li class="menu-item @(ViewContext.RouteData.Values["Controller"].ToString() == "Company" && ViewContext.RouteData.Values["Action"].ToString() == "HomeCompany" ? "active open" : "")">
                             <a class="menu-link" asp-area="" asp-controller="Company" asp-action="HomeCompany">
