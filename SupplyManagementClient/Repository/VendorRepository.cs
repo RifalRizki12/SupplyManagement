@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SupplyManagementAPI.DTOs.Companies;
 using SupplyManagementAPI.DTOs.Vendors;
 using SupplyManagementAPI.Models;
 using SupplyManagementAPI.Utilities.Handler;
@@ -106,5 +107,6 @@ namespace SupplyManagementClient.Repository
             }
             return entity;
         }
+
     }
 }

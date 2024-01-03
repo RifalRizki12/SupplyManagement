@@ -9,5 +9,7 @@ namespace SupplyManagementClient.Contract
         Task<ResponseOKHandler<IEnumerable<CompanyDetailDto>>> GetDetailClient();
         Task<ResponseOKHandler<IEnumerable<CompanyDetailDto>>> GetCompanyApproveAdmin();
         Task<ResponseOKHandler<IEnumerable<CompanyDetailDto>>> GetCompanyApproveManager();
+        Task<ResponseOKHandler<IEnumerable<CompanyDetailDto>>> GetCompanyVendor();
+
     }
 }

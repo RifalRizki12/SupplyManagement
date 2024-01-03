@@ -42,6 +42,11 @@ namespace SupplyManagementClient.Controllers
             return View();
         }
 
+        public async Task<IActionResult> GetVendor()
+        {
+            return View();
+        }
+
         [HttpGet]
         public async Task<JsonResult> GetCompanyData()
         {
@@ -60,6 +65,14 @@ namespace SupplyManagementClient.Controllers
         public async Task<JsonResult> GetCompanyApproveManager()
         {
             var result = await _companyRepository.GetCompanyApproveManager();
+            return Json(new { data = result.Data });
+        }
+
+
+        [HttpGet("/Company/GetAllVendor")]
+        public async Task<JsonResult> GetAllVendor()
+        {
+            var result = await _companyRepository.GetCompanyVendor();
             return Json(new { data = result.Data });
         }
     }

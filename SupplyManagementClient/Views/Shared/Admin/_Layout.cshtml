@@ -8,7 +8,7 @@
     var companyGuid = Context.Session.GetString("CompanyGuid");
 
     var foto = Context.Session.GetString("Foto");
-    var baseURL = "https://localhost:7109/"; // Gantilah URL dasar sesuai dengan kebutuhan
+    var baseURL = "https://localhost:7013/"; // Gantilah URL dasar sesuai dengan kebutuhan
     var photoURL = $"{baseURL}FotoCompany/{foto}";
 
     var token = Context.Session.GetString("JWToken");
@@ -141,7 +141,7 @@
                     @if (role == "admin")
                     {
                         <!-- Dashboards -->
-                        <li class="menu-item @(ViewContext.RouteData.Values["Controller"].ToString() == "Company" && ViewContext.RouteData.Values["Action"].ToString() == "GetGrafik" ? "active open" : "")">
+                        <li class="menu-item @(ViewContext.RouteData.Values["Controller"].ToString() == "Company" && ViewContext.RouteData.Values["Action"].ToString() == "GetCompany" ? "active open" : "")">
                             <a class="menu-link" asp-area="" asp-controller="Company" asp-action="GetCompany">
                                 <i class="menu-icon tf-icons ti ti-tada ti-smart-home"></i>
                                 <div data-i18n="Data Approve">Data Approve</div>
@@ -151,6 +151,12 @@
                             <a class="menu-link" asp-area="" asp-controller="Company" asp-action="GetCompanyAdmin">
                                 <i class="menu-icon tf-icons ti ti-tada ti-smart-home"></i>
                                 <div data-i18n="Data Approve Vendor">Data Approve Vendor</div>
+                            </a>
+                        </li>
+                        <li class="menu-item @(ViewContext.RouteData.Values["Controller"].ToString() == "Company" && ViewContext.RouteData.Values["Action"].ToString() == "GetVendor" ? "active open" : "")">
+                            <a class="menu-link" asp-area="" asp-controller="Company" asp-action="GetVendor">
+                                <i class="menu-icon tf-icons ti ti-tada ti-smart-home"></i>
+                                <div data-i18n="Data All Vendor">Data All Vendor</div>
                             </a>
                         </li>
 
@@ -536,8 +542,8 @@
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
-                                        @* <img src="@photoURL" class="h-auto rounded-circle"> *@
-                                        <img src="/logo/admin.jpg" class="h-auto rounded-circle">
+                                        <img src="@photoURL" class="h-auto rounded-circle">
+                                        @* <img src="/logo/admin.jpg" class="h-auto rounded-circle"> *@
                                     </div>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">

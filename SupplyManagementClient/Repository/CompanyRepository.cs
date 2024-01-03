@@ -53,6 +53,17 @@ namespace SupplyManagementClient.Repository
             }
         }
 
+        public async Task<ResponseOKHandler<IEnumerable<CompanyDetailDto>>> GetCompanyVendor()
+        {
+            // Ganti request ke endpoint yang sesuai
+            var requestUrl = "company-ApproveByManager";
 
+            using (var response = await httpClient.GetAsync(request + requestUrl))
+            {
+                string apiResponse = await response.Content.ReadAsStringAsync();
+                var entityVM = JsonConvert.DeserializeObject<ResponseOKHandler<IEnumerable<CompanyDetailDto>>>(apiResponse);
+                return entityVM;
+            }
+        }
     }
 }
